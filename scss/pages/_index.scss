@@ -5,3 +5,84 @@
     object-fit: cover;
   }
 }
+
+.ofertas {
+  margin-top: 1rem;
+  border-radius: 1%;
+  &__titulo {
+    height: 60px;
+    h2 {
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+    hr {
+      translate: 0 -25px;
+    }
+  }
+  &__articulo {
+    display: flex;
+    flex-direction: row;
+    img {
+      max-width: 50%;
+      max-height: 250px;
+    }
+    p {
+      margin: auto;
+    }
+    &-descripcion {
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      margin: 0;
+      max-height: 2.6em;
+      overflow: hidden;
+      overflow-wrap: anywhere;
+      text-overflow: ellipsis;
+    }
+  }
+  .ofertas__articulo-precio {
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+  }
+  .ofertas__articulo-desc {
+    color: green;
+  }
+}
+
+.envios {
+  margin-top: 1rem;
+  background-color: white;
+  text-align: center;
+  height: 30px;
+}
+
+.menu {
+  margin-top: 2rem;
+
+  &__list {
+    padding-left: 0;
+    margin-bottom: 0;
+    a {
+      img {
+        width: 70%;
+      }
+    }
+    p {
+      font-size: 0.8rem;
+      padding-top: 0.5rem;
+      text-align: center;
+    }
+  }
+}
+
+.carrusel {
+  margin-top: 1.5rem;
+  &__list {
+    text-align: center;
+    padding: 1rem auto;
+    i {
+      font-size: 3rem;
+      color: #0d6efd;
+    }
+  }
+}

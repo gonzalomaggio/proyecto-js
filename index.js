@@ -10,3 +10,6 @@ if (lista == "juan") {
   alert("No entra a la fiesta");
 }
  */
+for (let i = 10; i >= 1; i--) {
+  console.log(i);
+}

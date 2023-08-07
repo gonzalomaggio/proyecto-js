@@ -8,3 +8,14 @@ nav {
     }
   }
 }
+
+.btn-ingresar {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  i {
+    display: inline-block;
+    font-size: 1.2rem;
+    translate: 250px 0;
+  }
+}

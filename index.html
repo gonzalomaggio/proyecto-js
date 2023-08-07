@@ -19,7 +19,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container d-sm-flex justify-content-between flex-nowrap">
+        <div class="container d-sm-flex justify-content-between">
           <a class="navbar-brand" href="#">Navbar</a>
           <form class="d-flex" role="search">
             <input
@@ -43,9 +43,12 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
             <ul
-              class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-flex justify-content-center"
+              class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-flex justify-content-center align-items-end"
             >
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -91,7 +94,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="container bg-light">
       <section class="carrusel">
         <div
           id="carouselExampleInterval"
@@ -150,6 +153,136 @@
           </button>
         </div>
       </section>
+      <section>
+        <article class="envios">
+          <p>
+            <i class="bi bi-truck text-success"></i>
+            <span class="text-success">Envíos gratis </span> a partir de $10.000
+            de compra
+          </p>
+        </article>
+      </section>
+      <section class="menu">
+        <ul
+          class="menu__list d-flex flex-row justify-content-between align-items-center"
+        >
+          <li>
+            <a href=""><img src="./img/ofertas.png" alt="" /></a>
+            <p>Ofertas</p>
+          </li>
+          <li>
+            <a href=""><img src="./img/productos.png" alt="" /></a>
+            <p>Ofertas</p>
+          </li>
+          <li>
+            <a href=""><img src="./img/gift.png" alt="" /></a>
+            <p>Ofertas</p>
+          </li>
+          <li>
+            <a href=""><img src="./img/envios.png" alt="" /></a>
+            <p>Ofertas</p>
+          </li>
+          <li>
+            <a href=""><img src="./img/tienda.png" alt="" /></a>
+            <p>Ofertas</p>
+          </li>
+        </ul>
+      </section>
+      <section class="ofertas bg-white">
+        <div class="ofertas__titulo">
+          <h2>Ofertas</h2>
+          <hr />
+        </div>
+        <article class="ofertas__articulo">
+          <img src="./img/tvled.webp" alt="" />
+          <div>
+            <p class="ofertas__articulo-descripcion">
+              Smart TV Phillips 6900 series led Android 4"
+              dfgtssadldfkjabflhbhkfbherfbehfbherfb
+            </p>
+            <p class="ofertas__articulo-precio">$109.999</p>
+            <p class="ofertas__articulo-desc">16% off</p>
+          </div>
+        </article>
+        <hr />
+        <article class="ofertas__articulo">
+          <img src="./img/tvled.webp" alt="" />
+          <div>
+            <p class="ofertas__articulo-descripcion">
+              Smart TV Phillips 6900 series led Android
+            </p>
+            <p class="ofertas__articulo-precio">$109.999</p>
+            <p class="ofertas__articulo-desc">16% off</p>
+          </div>
+        </article>
+        <hr />
+        <article class="ofertas__articulo">
+          <img src="./img/tvled.webp" alt="" />
+          <div>
+            <p class="ofertas__articulo-descripcion">
+              Smart TV Phillips 6900 series led Android
+            </p>
+            <p class="ofertas__articulo-precio">$109.999</p>
+            <p class="ofertas__articulo-desc">16% off</p>
+          </div>
+        </article>
+        <hr />
+        <article class="ofertas__articulo">
+          <img src="./img/tvled.webp" alt="" />
+          <div>
+            <p class="ofertas__articulo-descripcion">
+              Smart TV Phillips 6900 series led Android
+            </p>
+            <p class="ofertas__articulo-precio">$109.999</p>
+            <p class="ofertas__articulo-desc">16% off</p>
+          </div>
+        </article>
+        <hr />
+        <a href="" class="btn-ingresar"
+          >Ver todas <i class="bi bi-arrow-right-short"></i
+        ></a>
+      </section>
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel carrusel slide bg-white"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active carrusel__list">
+            <i class="bi bi-cart-check"></i>
+            <h3>Hacé tu pedido hoy</h3>
+            <p>Recibilo en el día o en 24hs. Entregas sólo en San Nicolás</p>
+          </div>
+          <div class="carousel-item carrusel__list">
+            <i class="bi bi-credit-card"></i>
+            <h3>Todos los medios de pago</h3>
+            <p>Efectivo - Débito - Crédito - Cuenta DNI</p>
+          </div>
+          <div class="carousel-item carrusel__list">
+            <i class="bi bi-whatsapp"></i>
+            <h3>Comunicate por Whatsapp</h3>
+            <p>3364552552</p>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
