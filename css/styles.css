@@ -26,6 +26,10 @@ nav .btn-busqueda i {
   font-size: 1rem;
 }
 
+.navbar-toggler {
+  font-size: 1rem;
+}
+
 .btn-ingresar {
   display: block;
   width: 100%;

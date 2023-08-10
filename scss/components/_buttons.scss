@@ -3,10 +3,15 @@ nav {
     border: none;
     background-color: transparent;
     translate: -32px;
+
     i {
       font-size: 1rem;
     }
   }
+}
+
+.navbar-toggler {
+  font-size: 1rem;
 }
 
 .btn-ingresar {
