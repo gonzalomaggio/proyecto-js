@@ -49,6 +49,8 @@ function agregarProducto() {
 function calcularCostoEnvio(localidad) {
   let costoEnvio = 500;
 
+  localidad = localidad.toLowerCase();
+
   if (localidad === "san nicolás" || localidad === "san nicolas") {
     if (total >= 2000) {
       costoEnvio = 0;
