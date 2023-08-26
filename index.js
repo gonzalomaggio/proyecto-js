@@ -1,7 +1,7 @@
 /* Mi idea es armar un e-commerce para el proyecto final que ya comence a construir. En ésta primer pre-entrega arme un simulador de un carrito de compras con algunos productos y que además calcule el costo de envio segun la localidad, aunque superando algunos montos de compra el costo de envio es gratis.
  */
 
-const productos = {
+/* const productos = {
   manzana: 580,
   banana: 395,
   uva: 487,
@@ -111,3 +111,4 @@ while (continuar) {
     }
   }
 }
+ */

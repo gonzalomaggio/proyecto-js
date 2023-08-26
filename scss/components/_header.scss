@@ -1,0 +1,35 @@
+nav {
+  .btn-busqueda {
+    border: none;
+    background-color: transparent;
+    translate: -32px;
+
+    i {
+      font-size: 1rem;
+    }
+  }
+}
+
+.navbar-toggler {
+  font-size: 1rem;
+}
+
+.navbar-nav {
+  @include netbook {
+    margin-right: 7rem;
+  }
+}
+
+.form-pc {
+  display: none !important;
+
+  @include netbook {
+    display: flex !important;
+  }
+}
+
+.form-mobile {
+  @include netbook {
+    display: none !important;
+  }
+}

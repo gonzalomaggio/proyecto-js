@@ -1,26 +1,10 @@
-nav {
-  .btn-busqueda {
-    border: none;
-    background-color: transparent;
-    translate: -32px;
-
-    i {
-      font-size: 1rem;
-    }
-  }
-}
-
-.navbar-toggler {
-  font-size: 1rem;
-}
-
 .btn-ingresar {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   padding: 1rem;
   i {
     display: inline-block;
     font-size: 1.2rem;
-    translate: 250px 0;
   }
 }
