@@ -1,4 +1,8 @@
 nav {
+  background-color: #1be5be;
+  a {
+    width: 30%;
+  }
   .btn-busqueda {
     border: none;
     background-color: transparent;
@@ -29,6 +33,7 @@ nav {
 }
 
 .form-mobile {
+  width: 180px;
   @include netbook {
     display: none !important;
   }

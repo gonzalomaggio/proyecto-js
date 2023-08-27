@@ -26,8 +26,9 @@
     display: flex;
     flex-direction: row;
     img {
-      max-width: 50%;
-      max-height: 250px;
+      width: 177.5px;
+      height: 150px;
+      object-fit: cover;
     }
     p {
       margin: auto;
@@ -48,7 +49,7 @@
     padding-top: 0.5rem;
   }
   .ofertas__articulo-desc {
-    color: green;
+    color: #1be5be;
   }
 }
 
@@ -67,7 +68,7 @@
     margin-bottom: 0;
     a {
       img {
-        width: 70%;
+        width: 90%;
       }
     }
     p {
@@ -85,7 +86,7 @@
     padding: 1rem auto;
     i {
       font-size: 3rem;
-      color: #0d6efd;
+      color: #4467d6;
     }
   }
 }

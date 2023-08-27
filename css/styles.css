@@ -17,6 +17,12 @@ img {
   max-width: 100%;
 }
 
+nav {
+  background-color: #1be5be;
+}
+nav a {
+  width: 30%;
+}
 nav .btn-busqueda {
   border: none;
   background-color: transparent;
@@ -45,6 +51,9 @@ nav .btn-busqueda i {
   }
 }
 
+.form-mobile {
+  width: 180px;
+}
 @media (min-width: 991px) {
   .form-mobile {
     display: none !important;
@@ -56,6 +65,7 @@ nav .btn-busqueda i {
   justify-content: space-between;
   width: 100%;
   padding: 1rem;
+  color: #4467d6;
 }
 .btn-ingresar i {
   display: inline-block;
@@ -90,8 +100,9 @@ nav .btn-busqueda i {
   flex-direction: row;
 }
 .ofertas__articulo img {
-  max-width: 50%;
-  max-height: 250px;
+  width: 177.5px;
+  height: 150px;
+  object-fit: cover;
 }
 .ofertas__articulo p {
   margin: auto;
@@ -111,7 +122,7 @@ nav .btn-busqueda i {
   padding-top: 0.5rem;
 }
 .ofertas .ofertas__articulo-desc {
-  color: green;
+  color: #1be5be;
 }
 
 .envios {
@@ -129,7 +140,7 @@ nav .btn-busqueda i {
   margin-bottom: 0;
 }
 .menu__list a img {
-  width: 70%;
+  width: 90%;
 }
 .menu__list p {
   font-size: 0.8rem;
@@ -146,7 +157,7 @@ nav .btn-busqueda i {
 }
 .carrusel__list i {
   font-size: 3rem;
-  color: #0d6efd;
+  color: #4467d6;
 }
 
 .gift {
