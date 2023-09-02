@@ -1,12 +1,38 @@
 /* Mi idea es armar un e-commerce para el proyecto final que ya comence a construir. En ésta primer pre-entrega arme un simulador de un carrito de compras con algunos productos y que además calcule el costo de envio segun la localidad, aunque superando algunos montos de compra el costo de envio es gratis.
  */
 
-/* const productos = {
+/* Para la segunda pre-entrega se agrego un array con productos pero no se le muestra las opciones al usuario. Este debe ingresar un producto, si existe en stock el sistema lo deja continuar, sino le arroja un mensaje de que no hay disponible el producto que ingreso. */
+
+const productos = [
+  "manzana",
+  "banana",
+  "uva",
+  "pera",
+  "naranja",
+  "zanahoria",
+  "calabaza",
+  "tomate",
+  "mandarina",
+  "lechuga",
+  "frutilla",
+  "papa",
+  "cebolla",
+];
+
+const productosPrecios = {
   manzana: 580,
   banana: 395,
   uva: 487,
   pera: 665,
   naranja: 700,
+  zanahoria: 690,
+  calabaza: 850,
+  tomate: 475,
+  mandarina: 632,
+  lechuga: 476,
+  frutilla: 890,
+  papa: 567,
+  cebolla: 390,
 };
 
 let carrito = {};
@@ -14,18 +40,14 @@ let total = 0;
 let continuar = true;
 
 function agregarProducto() {
-  let producto = prompt(
-    "Ingrese el nombre de un producto (" +
-      Object.keys(productos).join(", ") +
-      "):"
-  );
+  let producto = prompt("Ingrese el nombre de un producto (fruta o verdura):");
 
   if (producto === null || producto.trim() === "") {
     alert("Debe ingresar un producto.");
     return;
   }
 
-  if (productos.hasOwnProperty(producto)) {
+  if (productos.includes(producto.toLowerCase())) {
     let cantidad = parseFloat(
       prompt(`Ingrese la cantidad de kilos de ${producto}:`)
     );
@@ -37,12 +59,12 @@ function agregarProducto() {
 
     carrito[producto] = {
       cantidad: cantidad,
-      precio: productos[producto],
+      precio: productosPrecios[producto],
     };
 
     total += carrito[producto].precio * carrito[producto].cantidad;
   } else {
-    alert("Producto no válido. Por favor, ingrese un producto de la lista.");
+    alert(`Lo sentimos, no disponemos de ${producto}.`);
   }
 }
 
@@ -111,4 +133,3 @@ while (continuar) {
     }
   }
 }
- */
