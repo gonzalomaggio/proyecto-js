@@ -26,7 +26,7 @@ nav a {
 nav .btn-busqueda {
   border: none;
   background-color: transparent;
-  translate: -32px;
+  translate: -60px;
 }
 nav .btn-busqueda i {
   font-size: 1rem;
@@ -36,6 +36,9 @@ nav .btn-busqueda i {
   font-size: 1rem;
 }
 
+.navbar-nav {
+  gap: 1rem;
+}
 @media (min-width: 991px) {
   .navbar-nav {
     margin-right: 7rem;
@@ -52,12 +55,22 @@ nav .btn-busqueda i {
 }
 
 .form-mobile {
-  width: 180px;
+  padding-top: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 @media (min-width: 991px) {
   .form-mobile {
     display: none !important;
   }
+}
+.form-mobile__input {
+  width: 70%;
+}
+
+.nav-link {
+  display: inline;
 }
 
 .btn-ingresar {
@@ -123,6 +136,12 @@ nav .btn-busqueda i {
 }
 .ofertas .ofertas__articulo-desc {
   color: #1be5be;
+}
+
+.carrito-item {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 3fr;
 }
 
 .envios {
@@ -202,6 +221,31 @@ nav .btn-busqueda i {
 }
 .categorias__articulo a img {
   width: 40%;
+}
+
+.slogan {
+  background-color: #1be5be;
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+}
+.slogan img {
+  width: 40%;
+  padding: 1rem;
+}
+.slogan p {
+  align-self: center;
+  font-size: 1.3rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.filtro__lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

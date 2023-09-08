@@ -1,0 +1,18 @@
+.slogan {
+  background-color: #1be5be;
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+  img {
+    width: 40%;
+    padding: 1rem;
+  }
+  p {
+    align-self: center;
+    font-size: 1.3rem;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+}

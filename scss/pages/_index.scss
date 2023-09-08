@@ -53,6 +53,12 @@
   }
 }
 
+.carrito-item {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 3fr;
+}
+
 .envios {
   margin-top: 1rem;
   background-color: white;
