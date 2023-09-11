@@ -15,8 +15,10 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
@@ -94,6 +96,7 @@
                   href="#offcanvasExample"
                   role="button"
                   aria-controls="offcanvasExample"
+                  onclick="abrirCarro()"
                   ><i class="bi bi-cart-check"></i> Carrito</a
                 >
               </li>
@@ -124,7 +127,7 @@
         </form>
       </nav>
     </header>
-    <main class="container bg-light">
+    <main class="container">
       <section class="carrusel">
         <div
           id="carouselExampleInterval"
@@ -229,6 +232,7 @@
               href="#offcanvasExample"
               role="button"
               aria-controls="offcanvasExample"
+              onclick="abrirCarro()"
             >
               <img src="./img/tienda.png" alt="" />
             </a>
@@ -267,49 +271,67 @@
         </div>
         <article class="ofertas__articulo">
           <img src="./img/tvled.webp" alt="" />
-          <div class="mt-1">
+          <div class="mt-1 contenedor-descripcion">
             <p class="ofertas__articulo-descripcion">
               Pampers baby dry - centro absorvente ultra rápido
             </p>
             <p class="ofertas__articulo-precio">$5400</p>
             <p class="ofertas__articulo-desc">16% off</p>
-            <button onclick="agregarAlCarrito(this)">Agregar al Carrito</button>
-          </div>
-        </article>
-        <hr />
-        <article class="ofertas__articulo">
-          <img src="./img/tvled.webp" alt="" />
-          <div class="mt-3">
-            <p class="ofertas__articulo-descripcion">
-              Smart TV Phillips 6900 series led Android
-            </p>
-            <p class="ofertas__articulo-precio">$109.999</p>
-            <p class="ofertas__articulo-desc">16% off</p>
-            <button class="btn btn-primary" onclick="agregarAlCarrito(this)">
+            <button
+              class="btn btn-primary btn-sm"
+              onclick="agregarAlCarrito(this)"
+            >
               Añadir al carrito
             </button>
           </div>
         </article>
         <hr />
         <article class="ofertas__articulo">
-          <img src="./img/tvled.webp" alt="" />
-          <div class="mt-3">
+          <img src="./img/pampers_confort_max.jpg" alt="" />
+          <div class="mt-3 contenedor-descripcion">
             <p class="ofertas__articulo-descripcion">
-              Smart TV Phillips 6900 series led Android
+              Pampers Confort Sec Max G, XG, XXG
             </p>
-            <p class="ofertas__articulo-precio">$109.999</p>
-            <p class="ofertas__articulo-desc">16% off</p>
+            <p class="ofertas__articulo-precio">$9630</p>
+            <p class="ofertas__articulo-desc">20% off</p>
+            <button
+              class="btn btn-primary btn-sm"
+              onclick="agregarAlCarrito(this)"
+            >
+              Añadir al carrito
+            </button>
           </div>
         </article>
         <hr />
         <article class="ofertas__articulo">
-          <img src="./img/tvled.webp" alt="" />
-          <div class="mt-3">
+          <img src="./img/pampers_supersec.1.jpg" alt="" />
+          <div class="mt-3 contenedor-descripcion">
             <p class="ofertas__articulo-descripcion">
-              Smart TV Phillips 6900 series led Android
+              Pampers Supersec megapack pequeño
             </p>
-            <p class="ofertas__articulo-precio">$109.999</p>
+            <p class="ofertas__articulo-precio">$10500</p>
+            <p class="ofertas__articulo-desc">30% off</p>
+            <button
+              class="btn btn-primary btn-sm"
+              onclick="agregarAlCarrito(this)"
+            >
+              Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <hr />
+        <article class="ofertas__articulo">
+          <img src="./img/kimbies_toallitas.jpg" alt="" />
+          <div class="mt-3 contenedor-descripcion">
+            <p class="ofertas__articulo-descripcion">Toallitas Kimbies x 48</p>
+            <p class="ofertas__articulo-precio">$3456</p>
             <p class="ofertas__articulo-desc">16% off</p>
+            <button
+              class="btn btn-primary btn-sm"
+              onclick="agregarAlCarrito(this)"
+            >
+              Añadir al carrito
+            </button>
           </div>
         </article>
         <hr />

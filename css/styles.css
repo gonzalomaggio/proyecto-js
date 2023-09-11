@@ -85,6 +85,40 @@ nav .btn-busqueda i {
   font-size: 1.2rem;
 }
 
+.boton-cantidad {
+  border: 1px #4467d6 solid;
+  width: 120px;
+  height: 35px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.boton-cantidad button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  color: #4467d6;
+}
+
+.btn-trash {
+  background-color: transparent;
+  border: none;
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.btn-trash i {
+  color: black;
+  font-size: 1.3rem;
+}
+
+body,
+main {
+  background-color: #ebebeb;
+}
+
 .carrusel img {
   width: 100%;
   height: 100%;
@@ -111,6 +145,7 @@ nav .btn-busqueda i {
 .ofertas__articulo {
   display: flex;
   flex-direction: row;
+  padding: 0.5rem 0;
 }
 .ofertas__articulo img {
   width: 177.5px;
@@ -130,18 +165,82 @@ nav .btn-busqueda i {
   overflow-wrap: anywhere;
   text-overflow: ellipsis;
 }
+.ofertas__articulo .contenedor-descripcion {
+  width: 197.5px;
+  height: 146px;
+}
 .ofertas .ofertas__articulo-precio {
   font-size: 1.3rem;
   padding-top: 0.5rem;
 }
 .ofertas .ofertas__articulo-desc {
-  color: #1be5be;
+  color: #00a650;
+}
+
+.mensaje-vacio {
+  font-size: 1.2rem !important;
+}
+
+.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.btn-redirigir {
+  background-color: #4467d6;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  width: 200px;
+  height: 30px;
 }
 
 .carrito-item {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 50px 20px;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.carrito-item hr {
+  align-self: flex-start;
+  grid-column: 1/4;
+}
+
+.carrito-precio {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  justify-self: end;
+  align-self: flex-start;
+  margin: 0;
+  padding: 0 !important;
+}
+
+.carrito-subtotal {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  justify-self: end;
+  align-self: flex-end;
+  margin: 0;
+  padding: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.resumen-total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.total-carrito {
+  font-size: 1.5rem !important;
+  color: #4467d6;
+}
+
+.unidades-carrito {
+  font-size: 1.2rem !important;
 }
 
 .envios {
