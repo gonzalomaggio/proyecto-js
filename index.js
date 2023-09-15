@@ -1,140 +1,3 @@
-/* Mi idea es armar un e-commerce para el proyecto final que ya comence a construir. En ésta primer pre-entrega arme un simulador de un carrito de compras con algunos productos y que además calcule el costo de envio segun la localidad, aunque superando algunos montos de compra el costo de envio es gratis.
- */
-
-/* Para la segunda pre-entrega se agrego un array con productos pero no se le muestra las opciones al usuario. Este debe ingresar un producto, si existe en stock el sistema lo deja continuar, sino le arroja un mensaje de que no hay disponible el producto que ingreso. */
-
-/* const productos = [
-  "manzana",
-  "banana",
-  "uva",
-  "pera",
-  "naranja",
-  "zanahoria",
-  "calabaza",
-  "tomate",
-  "mandarina",
-  "lechuga",
-  "frutilla",
-  "papa",
-  "cebolla",
-];
-
-const productosPrecios = {
-  manzana: 580,
-  banana: 395,
-  uva: 487,
-  pera: 665,
-  naranja: 700,
-  zanahoria: 690,
-  calabaza: 850,
-  tomate: 475,
-  mandarina: 632,
-  lechuga: 476,
-  frutilla: 890,
-  papa: 567,
-  cebolla: 390,
-};
-
-let carrito = {};
-let total = 0;
-let continuar = true;
-
-function agregarProducto() {
-  let producto = prompt("Ingrese el nombre de un producto (fruta o verdura):");
-
-  if (producto === null || producto.trim() === "") {
-    alert("Debe ingresar un producto.");
-    return;
-  }
-
-  if (productos.includes(producto.toLowerCase())) {
-    let cantidad = parseFloat(
-      prompt(`Ingrese la cantidad de kilos de ${producto}:`)
-    );
-
-    if (isNaN(cantidad) || cantidad <= 0) {
-      alert("Cantidad no válida. Debe ingresar un número mayor a 0.");
-      return;
-    }
-
-    carrito[producto] = {
-      cantidad: cantidad,
-      precio: productosPrecios[producto],
-    };
-
-    total += carrito[producto].precio * carrito[producto].cantidad;
-  } else {
-    alert(`Lo sentimos, no disponemos de ${producto}.`);
-  }
-}
-
-function calcularCostoEnvio(localidad) {
-  let costoEnvio = 500;
-
-  localidad = localidad.toLowerCase();
-
-  if (localidad === "san nicolás" || localidad === "san nicolas") {
-    if (total >= 2000) {
-      costoEnvio = 0;
-    }
-  } else if (
-    localidad === "villa constitución" ||
-    localidad === "villa constitucion"
-  ) {
-    if (total >= 3000) {
-      costoEnvio = 0;
-    }
-  } else if (localidad === "ramallo") {
-    if (total >= 4000) {
-      costoEnvio = 0;
-    }
-  }
-
-  return costoEnvio;
-}
-
-while (continuar) {
-  agregarProducto();
-
-  let agregarOtro = prompt("¿Desea agregar otro producto? s/n");
-
-  if (agregarOtro === null || agregarOtro.toLowerCase() !== "s") {
-    continuar = false;
-  }
-
-  if (!continuar && Object.keys(carrito).length > 0) {
-    let localidad = prompt(
-      "Ingrese su localidad:\nSan Nicolás\nVilla Constitución\nRamallo"
-    );
-
-    if (localidad !== null) {
-      localidad = localidad.toLowerCase();
-      let costoEnvio = calcularCostoEnvio(localidad);
-
-      let resumenCompra = "Productos en el carrito:\n";
-      for (let producto in carrito) {
-        resumenCompra += `${producto} - ${
-          carrito[producto].cantidad
-        } kilos ($${(
-          carrito[producto].precio * carrito[producto].cantidad
-        ).toFixed(2)})\n`;
-      }
-
-      alert(
-        resumenCompra +
-          "\nTotal de la compra: $" +
-          total.toFixed(2) +
-          "\nCosto de envío: $" +
-          costoEnvio.toFixed(2)
-      );
-
-      let mensajeFinal = "Gracias por su compra, vuelva pronto!";
-      alert(mensajeFinal);
-    }
-  }
-}
- */
-
 let carrito = [];
 
 // Función para abrir el offcanvas
@@ -278,8 +141,8 @@ function actualizarCarrito() {
   totalHTML.innerHTML = `
           
           <p class="total-carrito">Total del carrito: $${total
-            .toFixed(2)
-            .replace(".", ",")}</p>
+      .toFixed(2)
+      .replace(".", ",")}</p>
           <p class="unidades-carrito">Cantidad de productos: ${cantidadTotal} </p>
           <button onclick="finalizarCompra()" class="btn btn-secondary">Finalizar Compra</button>
         `;
@@ -336,6 +199,23 @@ function finalizarCompra() {
   actualizarCarrito();
 }
 
+
+
+
+
+// Seleccionar todos los elementos con la clase "abrir-carro"
+const elementosAbrirCarro = document.querySelectorAll(".abrir-carro");
+
+// Agregar un event listener a cada elemento
+elementosAbrirCarro.forEach((elemento) => {
+  elemento.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace o botón
+
+    // Lógica para abrir el carrito aquí
+    abrirCarro();
+  });
+});
+
 // Función para abrir el offcanvas
 function abrirCarro() {
   // Verificar si el carrito está vacío
@@ -359,3 +239,19 @@ function abrirCarro() {
     offcanvas.show();
   }
 }
+
+
+
+
+
+/* Selecciona todos los botones con la clase "agregarAlCarritoBtn" */
+const botonesAgregarAlCarrito = document.querySelectorAll(
+  ".agregarAlCarritoBtn"
+);
+
+// Agrega un evento de clic a cada botón
+botonesAgregarAlCarrito.forEach((boton) => {
+  boton.addEventListener("click", function () {
+    agregarAlCarrito(this);
+  });
+});

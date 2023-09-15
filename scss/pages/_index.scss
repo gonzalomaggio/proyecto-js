@@ -14,31 +14,71 @@ main {
 .ofertas {
   margin-top: 1rem;
   border-radius: 1%;
+
+
   hr {
     margin: auto;
   }
+
   &__titulo {
     height: 60px;
+
     h2 {
       padding: 1rem;
       font-size: 1.5rem;
     }
+
     hr {
       translate: 0 -15px;
     }
   }
+
+  &__contenedor {
+    @include tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+
   &__articulo {
     display: flex;
     flex-direction: row;
     padding: 0.5rem 0;
+
+    &-2 {
+      @include tablet {
+        grid-column: 1/2;
+        grid-row: 2/3;
+
+      }
+    }
+
+    &-3 {
+      @include tablet {
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+      }
+    }
+
+    &-4 {
+      @include tablet {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+    }
+
     img {
       width: 177.5px;
       height: 150px;
       object-fit: cover;
     }
+
     p {
       margin: auto;
     }
+
     &-descripcion {
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -49,15 +89,18 @@ main {
       overflow-wrap: anywhere;
       text-overflow: ellipsis;
     }
+
     .contenedor-descripcion {
       width: 197.5px;
       height: 146px;
     }
   }
+
   .ofertas__articulo-precio {
     font-size: 1.3rem;
     padding-top: 0.5rem;
   }
+
   .ofertas__articulo-desc {
     color: #00a650;
   }
@@ -89,11 +132,13 @@ main {
   grid-template-columns: 1fr 3fr 1fr;
   justify-content: center;
   align-items: center;
+
   hr {
     align-self: flex-start;
     grid-column: 1/4;
   }
 }
+
 .carrito-precio {
   grid-column: 2/4;
   grid-row: 2/3;
@@ -141,11 +186,26 @@ main {
   &__list {
     padding-left: 0;
     margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      justify-content: space-around;
+    }
+
+    @include netbook {
+      display: none;
+    }
+
     a {
       img {
         width: 90%;
+        max-width: 93px;
       }
     }
+
     p {
       font-size: 0.8rem;
       padding-top: 0.5rem;
@@ -156,15 +216,18 @@ main {
 
 .carrusel {
   margin-top: 1.5rem;
+
   &__list {
     text-align: center;
     padding: 1rem auto;
+
     i {
       font-size: 3rem;
       color: #4467d6;
     }
   }
 }
+
 .gift {
   background: linear-gradient(90deg, #a90f90 55%, #0c1a51);
   padding: 1rem 1.5rem;
@@ -184,6 +247,7 @@ main {
   &__price-desc {
     font-size: 1.2rem;
   }
+
   &__price {
     font-size: 1.8rem;
   }
@@ -203,8 +267,10 @@ main {
     border-bottom: 1px solid #eae6e6;
     border-right: 1px solid #eae6e6;
     border-radius: 2px;
+
     a {
       width: 100%;
+
       img {
         width: 40%;
       }

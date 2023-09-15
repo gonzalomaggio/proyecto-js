@@ -22,6 +22,7 @@ nav {
 }
 nav a {
   width: 30%;
+  max-width: 115px;
 }
 nav .btn-busqueda {
   border: none;
@@ -142,10 +143,35 @@ main {
 .ofertas__titulo hr {
   translate: 0 -15px;
 }
+@media (min-width: 768px) {
+  .ofertas__contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
 .ofertas__articulo {
   display: flex;
   flex-direction: row;
   padding: 0.5rem 0;
+}
+@media (min-width: 768px) {
+  .ofertas__articulo-2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+@media (min-width: 768px) {
+  .ofertas__articulo-3 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+@media (min-width: 768px) {
+  .ofertas__articulo-4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
 }
 .ofertas__articulo img {
   width: 177.5px;
@@ -256,9 +282,24 @@ main {
 .menu__list {
   padding-left: 0;
   margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .menu__list {
+    justify-content: space-around;
+  }
+}
+@media (min-width: 991px) {
+  .menu__list {
+    display: none;
+  }
 }
 .menu__list a img {
   width: 90%;
+  max-width: 93px;
 }
 .menu__list p {
   font-size: 0.8rem;
