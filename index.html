@@ -16,7 +16,7 @@
   <title>Document</title>
 </head>
 
-<body>
+<body class="pagina-index">
   <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid d-sm-flex justify-content-between">
@@ -26,45 +26,53 @@
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <ul class="navbar-nav mb-2 mb-lg-0 d-lg-flex justify-content-center align-items-start pt-4">
+        <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 d-lg-flex justify-content- align-items-start pt-4">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> Inicio</a>
+              <a class="nav-link active" aria-current="page" href="#">
+                Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="bi bi-tag"></i> Ofertas</a>
+              <a class="nav-link active" href="#"> Ofertas</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false"><i class="bi bi-bag"></i>
+              <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Productos
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Pañales</a></li>
+                <li><a class="dropdown-item" href="#">Hogar</a></li>
                 <li>
-                  <hr class="dropdown-divider" />
+                  <a class="dropdown-item" href="#">Cuidado maternal</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#">Hora de comer</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Accesorios</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Higiene</a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="bi bi-gift"></i> Gift Card</a>
+              <a class="nav-link active" href="#"> Gift Card</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="bi bi-truck"></i> Envíos</a>
+              <a class="nav-link active" href="#"> Envíos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link abrir-carro" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-                aria-controls="offcanvasExample"><i class="bi bi-cart-check"></i> Carrito</a>
+              <a class="nav-link active abrir-carro" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                Carrito</a>
             </li>
           </ul>
           <form class="d-flex form-pc" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <input class="form-control me-2" type="search" placeholder="Palabra clave..." aria-label="Search" />
             <button class="btn btn-outline-success" type="submit">
-              Search
+              Buscar
             </button>
           </form>
         </div>
@@ -128,7 +136,7 @@
           <p>Ofertas</p>
         </li>
         <li>
-          <a class="d-flex align-items-center justify-content-center" href="./pages/productos.html"><img
+          <a class="d-flex align-items-center justify-content-center" href="./productos.html"><img
               src="./img/productos.png" alt="" /></a>
           <p>Productos</p>
         </li>
@@ -145,6 +153,7 @@
             href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
             <img src="./img/tienda.png" alt="" />
           </a>
+          <p>Carrito</p>
 
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel">
@@ -156,8 +165,6 @@
             </div>
             <div class="offcanvas-body"></div>
           </div>
-          <a class="d-flex align-items-center justify-content-center" href=""></a>
-          <p>Carrito</p>
         </li>
       </ul>
     </section>
@@ -167,61 +174,9 @@
         <hr />
       </div>
       <div class="ofertas__contenedor">
-        <article class="ofertas__articulo ofertas__articulo-1">
-          <img src="./img/tvled.webp" alt="" />
-          <div class="mt-1 contenedor-descripcion">
-            <p class="ofertas__articulo-descripcion">
-              Pampers baby dry - centro absorvente ultra rápido
-            </p>
-            <p class="ofertas__articulo-precio">$5400</p>
-            <p class="ofertas__articulo-desc">16% off</p>
-            <button class="btn btn-primary btn-sm agregarAlCarritoBtn">
-              Añadir al carrito
-            </button>
-          </div>
-        </article>
-        <hr />
-        <article class="ofertas__articulo ofertas__articulo-2">
-          <img src="./img/pampers_confort_max.jpg" alt="" />
-          <div class="mt-3 contenedor-descripcion">
-            <p class="ofertas__articulo-descripcion">
-              Pampers Confort Sec Max G, XG, XXG
-            </p>
-            <p class="ofertas__articulo-precio">$9630</p>
-            <p class="ofertas__articulo-desc">20% off</p>
-            <button class="btn btn-primary btn-sm agregarAlCarritoBtn">
-              Añadir al carrito
-            </button>
-          </div>
-        </article>
-        <hr />
-        <article class="ofertas__articulo ofertas__articulo-3">
-          <img src="./img/pampers_supersec.1.jpg" alt="" />
-          <div class="mt-3 contenedor-descripcion">
-            <p class="ofertas__articulo-descripcion">
-              Pampers Supersec megapack pequeño
-            </p>
-            <p class="ofertas__articulo-precio">$10500</p>
-            <p class="ofertas__articulo-desc">30% off</p>
-            <button class="btn btn-primary btn-sm agregarAlCarritoBtn">
-              Añadir al carrito
-            </button>
-          </div>
-        </article>
-        <hr />
-        <article class="ofertas__articulo ofertas__articulo-4">
-          <img src="./img/kimbies_toallitas.jpg" alt="" />
-          <div class="mt-3 contenedor-descripcion">
-            <p class="ofertas__articulo-descripcion">Toallitas Kimbies x 48</p>
-            <p class="ofertas__articulo-precio">$3456</p>
-            <p class="ofertas__articulo-desc">16% off</p>
-            <button class="btn btn-primary btn-sm agregarAlCarritoBtn">
-              Añadir al carrito
-            </button>
-          </div>
-        </article>
+
       </div>
-      <hr />
+
       <a href="" class="btn-ingresar">Ver todas <i class="bi bi-arrow-right-short"></i></a>
     </section>
 
@@ -324,7 +279,7 @@
       <p>¡La pañalera en casa!</p>
     </div>
     <ul class="d-flex justify-content-around ps-0 pt-4">
-      <div>
+      <div class="map">
         <li>Inicio</li>
         <li>Productos</li>
         <li>Gift Card</li>

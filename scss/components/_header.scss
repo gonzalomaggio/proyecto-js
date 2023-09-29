@@ -5,6 +5,7 @@ nav {
     width: 30%;
     max-width: 115px;
   }
+
   .btn-busqueda {
     border: none;
     background-color: transparent;
@@ -22,8 +23,9 @@ nav {
 
 .navbar-nav {
   gap: 1rem;
+
   @include netbook {
-    margin-right: 7rem;
+    padding: 0 !important
   }
 }
 
@@ -40,13 +42,16 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
+
   @include netbook {
     display: none !important;
   }
+
   &__input {
     width: 70%;
   }
 }
+
 .nav-link {
   display: inline;
 }

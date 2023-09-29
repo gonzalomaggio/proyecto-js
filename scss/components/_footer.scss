@@ -3,10 +3,21 @@
   display: flex;
   margin-top: 1rem;
   justify-content: center;
+
+  @include netbook {
+    max-height: 100px;
+  }
+
   img {
     width: 40%;
     padding: 1rem;
+
+    @include netbook {
+      max-width: 15%;
+      margin-left: 3rem;
+    }
   }
+
   p {
     align-self: center;
     font-size: 1.3rem;
@@ -14,5 +25,9 @@
     width: 100%;
     text-align: center;
     margin: 0;
+
+    @include netbook {
+      font-size: 2rem;
+    }
   }
 }

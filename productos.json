@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "descripcion": "Pampers baby dry - centro absorvente ultra rápido",
+    "imagen": "img/tvled.webp",
+    "precio": 5400,
+    "descuento": 0,
+    "categoria": "Pañales"
+  },
+  {
+    "id": 2,
+    "descripcion": "Pampers Confort Sec Max G, XG, XXG",
+    "imagen": "img/pampers_confort_max.jpg",
+    "precio": 9630,
+    "descuento": 20,
+    "categoria": "Pañales"
+  },
+  {
+    "id": 3,
+    "descripcion": "Pampers Supersec megapack pequeño",
+    "imagen": "img/pampers_supersec_1.jpg",
+    "precio": 10500,
+    "descuento": 30,
+    "categoria": "Pañales"
+  },
+  {
+    "id": 4,
+    "descripcion": "Toallitas Kimbies x 48",
+    "imagen": "img/kimbies_toallitas.jpg",
+    "precio": 3456,
+    "descuento": 0,
+    "categoria": "Higiene"
+  },
+  {
+    "id": 5,
+    "descripcion": "Toallitas Kimbies x 30",
+    "imagen": "img/kimbies_toallitas.jpg",
+    "precio": 2000,
+    "descuento": 20,
+    "categoria": "Higiene"
+  },
+  {
+    "id": 6,
+    "descripcion": "Pampers Confort Sec Max all night comfort",
+    "imagen": "img/pampers_confort_max.jpg",
+    "precio": 2780,
+    "descuento": 15,
+    "categoria": "Pañales"
+  },
+  {
+    "id": 6,
+    "descripcion": "Pampers Confort Sec Max all night comfort",
+    "imagen": "img/pampers_confort_max.jpg",
+    "precio": 2780,
+    "descuento": 15,
+    "categoria": "Pañales"
+  },
+  {
+    "id": 6,
+    "descripcion": "Pampers Confort Sec Max all night comfort",
+    "imagen": "img/pampers_confort_max.jpg",
+    "precio": 2780,
+    "descuento": 19,
+    "categoria": "Pañales"
+  },
+  {
+    "id": 6,
+    "descripcion": "Pampers Confort Sec Max all night comfort",
+    "imagen": "img/pampers_confort_max.jpg",
+    "precio": 2780,
+    "descuento": 15,
+    "categoria": "Pañales"
+  },
+  {
+    "id": 6,
+    "descripcion": "Pampers Confort Sec Max all night comfort",
+    "imagen": "img/pampers_confort_max.jpg",
+    "precio": 2780,
+    "descuento": 15,
+    "categoria": "Pañales"
+  },
+  {
+    "id": 6,
+    "descripcion": "Pampers Confort Sec Max all night comfort",
+    "imagen": "img/pampers_confort_max.jpg",
+    "precio": 2780,
+    "descuento": 12,
+    "categoria": "Pañales"
+  }
+]

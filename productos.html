@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Document</title>
+</head>
+
+<body class="pagina-productos">
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid d-sm-flex justify-content-between">
+        <a class="navbar-brand" href="#"><img src="../img/logo.png" alt="" /></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 d-lg-flex justify-content- align-items-start pt-4">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">
+                Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"> Ofertas</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Productos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Pañales</a></li>
+                <li><a class="dropdown-item" href="#">Hogar</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Cuidado maternal</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Hora de comer</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Accesorios</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Higiene</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"> Gift Card</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"> Envíos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active abrir-carro" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                Carrito</a>
+            </li>
+          </ul>
+          <form class="d-flex form-pc" role="search">
+            <input class="form-control me-2" type="search" placeholder="Palabra clave..." aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">
+              Buscar
+            </button>
+          </form>
+        </div>
+      </div>
+      <form class="d-flex form-mobile" role="search">
+        <input class="form-control me-2 form-mobile__input" type="search" placeholder="Buscar" aria-label="Search" />
+        <button class="btn-busqueda" type="submit">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+    </nav>
+  </header>
+  <main>
+    <section class="menu">
+      <ul class="menu__list menu__list-productos">
+        <li>
+          <button id="categoria-ofertas" class="d-flex align-items-center justify-content-center"><img
+              src="./img/ofertas.png" alt="" /></button>
+          <p>Ofertas</p>
+        </li>
+        <li>
+          <button id="categoria-panales" class="d-flex align-items-center justify-content-center"><img
+              src="./img/panal2.png" alt="" /></button>
+          <p>Pañales</p>
+        </li>
+        <li>
+          <button id="categoria-gift" class="d-flex align-items-center justify-content-center"><img src="./img/gift.png"
+              alt="" /></button>
+          <p>Gift</p>
+        </li>
+        <li>
+          <button id="categoria-alimentacion" class="d-flex align-items-center justify-content-center"><img
+              src="./img/comida2.png" alt="" /></button>
+          <p>Alimentación</p>
+        </li>
+        <li>
+          <button id="categoria-higiene" class="d-flex align-items-center justify-content-center"><img
+              src="../img/higiene2.png" alt="" /></button>
+          <p>Higiene</p>
+        </li>
+        <li>
+          <button id="categoria-hogar" class="d-flex align-items-center justify-content-center"><img
+              src="./img/hogar2.png" alt="" /></button>
+          <p>Hogar</p>
+        </li>
+        <li>
+          <button id="categoria-accesorios" class="d-flex align-items-center justify-content-center"><img
+              src="./img/accesorio2.png" alt="" /></button>
+          <p>Accesorios</p>
+        </li>
+        <li>
+          <button id="categoria-maternidad" class="d-flex align-items-center justify-content-center"><img
+              src="./img/lactancia2.png" alt="" /></button>
+          <p>Maternidad</p>
+        </li>
+      </ul>
+    </section>
+    <div class="ofertas__contenedor"></div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
