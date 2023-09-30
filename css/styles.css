@@ -143,11 +143,18 @@ main {
 .ofertas__titulo hr {
   translate: 0 -15px;
 }
+.ofertas__contenedor {
+  background-color: white;
+}
 @media (min-width: 768px) {
   .ofertas__contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 1rem;
+  }
+  .ofertas__contenedor hr {
+    display: none;
   }
   .ofertas__contenedor article:nth-child(3) {
     grid-column: 2/3;
@@ -193,16 +200,16 @@ main {
   overflow-wrap: anywhere;
   text-overflow: ellipsis;
 }
-.ofertas__articulo .contenedor-descripcion {
-  width: 197.5px;
-  height: 146px;
-}
-.ofertas .ofertas__articulo-precio {
+.ofertas__articulo-precio {
   font-size: 1.3rem;
   padding-top: 0.5rem;
 }
-.ofertas .ofertas__articulo-desc {
+.ofertas__articulo-desc {
   color: #00a650;
+}
+.ofertas__articulo .contenedor-descripcion {
+  width: 197.5px;
+  height: 146px;
 }
 
 .mensaje-vacio {
@@ -241,7 +248,7 @@ main {
   grid-column: 2/4;
   grid-row: 2/3;
   justify-self: end;
-  align-self: flex-start;
+  align-self: flex-start !important;
   margin: 0;
   padding: 0 !important;
 }
@@ -250,7 +257,7 @@ main {
   grid-column: 2/4;
   grid-row: 2/3;
   justify-self: end;
-  align-self: flex-end;
+  align-self: flex-end !important;
   margin: 0;
   padding: 0 !important;
   font-size: 1.1rem !important;
@@ -293,6 +300,8 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.menu__list-productos {
   flex-wrap: wrap;
 }
 @media (min-width: 768px) {

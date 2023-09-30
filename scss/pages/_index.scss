@@ -34,10 +34,18 @@ main {
   }
 
   &__contenedor {
+    background-color: white;
+
     @include tablet {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
+
+      margin-top: 1rem;
+
+      hr {
+        display: none;
+      }
 
 
 
@@ -97,20 +105,22 @@ main {
       text-overflow: ellipsis;
     }
 
+    &-precio {
+      font-size: 1.3rem;
+      padding-top: 0.5rem;
+    }
+
+    &-desc {
+      color: #00a650;
+    }
+
     .contenedor-descripcion {
       width: 197.5px;
       height: 146px;
     }
   }
 
-  .ofertas__articulo-precio {
-    font-size: 1.3rem;
-    padding-top: 0.5rem;
-  }
 
-  .ofertas__articulo-desc {
-    color: #00a650;
-  }
 }
 
 .mensaje-vacio {
@@ -150,16 +160,18 @@ main {
   grid-column: 2/4;
   grid-row: 2/3;
   justify-self: end;
-  align-self: flex-start;
+  align-self: flex-start !important;
   margin: 0;
   padding: 0 !important;
+
+
 }
 
 .carrito-subtotal {
   grid-column: 2/4;
   grid-row: 2/3;
   justify-self: end;
-  align-self: flex-end;
+  align-self: flex-end !important;
   margin: 0;
   padding: 0 !important;
   font-size: 1.1rem !important;
@@ -201,7 +213,11 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+
+    &-productos {
+      flex-wrap: wrap;
+    }
+
 
     @include tablet {
       justify-content: space-around;

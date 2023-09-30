@@ -320,10 +320,33 @@ function abrirCarro() {
 // Declaración de una variable para almacenar los productos en el carrito
 
 /* ------------------------------------------------------------------------------------------------------------ */
+
 let carrito = [];
 
 // Variable para mantener un seguimiento de la categoría seleccionada
 let categoriaSeleccionada = '';
+
+// Función para obtener el carrito desde el Local Storage
+function obtenerCarritoDesdeLocalStorage() {
+  const carritoGuardado = localStorage.getItem("carrito");
+  return carritoGuardado ? JSON.parse(carritoGuardado) : [];
+}
+
+// Función para guardar el carrito en el Local Storage
+function guardarCarritoEnLocalStorage() {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+// Función para actualizar el carrito en tiempo real en ambas páginas
+function actualizarCarritoEnTiempoReal() {
+  // Escuchar cambios en el Local Storage relacionados con el carrito
+  window.addEventListener("storage", (event) => {
+    if (event.key === "carrito") {
+      carrito = obtenerCarritoDesdeLocalStorage();
+      actualizarCarrito();
+    }
+  });
+}
 
 // Función para abrir el offcanvas
 function abrirCarrito() {
@@ -364,6 +387,8 @@ function agregarAlCarrito(id) {
       cantidad: 1,
     });
   }
+  // Actualizar el carrito en el Local Storage
+  guardarCarritoEnLocalStorage();
 
   // Actualizar el carrito en el offcanvas
   actualizarCarrito();
@@ -476,6 +501,7 @@ function aumentarCantidad(id) {
   const producto = carrito.find((producto) => producto.id === id);
   if (producto) {
     producto.cantidad += 1;
+    guardarCarritoEnLocalStorage();
     actualizarCarrito();
   }
 }
@@ -485,6 +511,7 @@ function disminuirCantidad(id) {
   const producto = carrito.find((producto) => producto.id === id);
   if (producto && producto.cantidad > 1) {
     producto.cantidad -= 1;
+    guardarCarritoEnLocalStorage();
     actualizarCarrito();
   }
 }
@@ -492,6 +519,7 @@ function disminuirCantidad(id) {
 // Función para eliminar un producto del carrito
 function eliminarProducto(id) {
   carrito = carrito.filter((producto) => producto.id !== id);
+  guardarCarritoEnLocalStorage();
   actualizarCarrito();
 }
 
@@ -541,10 +569,14 @@ fetch("productos.json")
         ofertasContenedor.innerHTML = '';
 
         // Muestra los productos con descuento en el contenedor de ofertas
-        mostrarProductosEnHTML(productosConDescuento, ofertasContenedor);
+        mostrarProductosEnHTML(productosConDescuento);
       }
       else { mostrarProductosPorCategoria(categoriaSeleccionada); }
     }
+    // Cargar el carrito desde el Local Storage al cargar la página
+    carrito = obtenerCarritoDesdeLocalStorage();
+    actualizarCarrito();
+    actualizarCarritoEnTiempoReal();
   })
   .catch((error) => console.error("Error al cargar los productos:", error));
 
@@ -554,7 +586,30 @@ fetch("productos.json")
 function mostrarProductosEnHTML(productos) {
   const contenedorProductos = document.querySelector(".ofertas__contenedor");
 
+  // Filtrar productos con descuento mayor a 0
+  const productosConDescuento = productos.filter(producto => producto.descuento > 0);
+
+  // Verificar si hay productos con descuento
+  if (productosConDescuento.length > 0) {
+    // Crear el div del título
+    const tituloDiv = document.createElement("div");
+    tituloDiv.classList.add("ofertas__titulo");
+
+    // Crear el título (h2)
+    const tituloH2 = document.createElement("h2");
+    tituloH2.textContent = "Ofertas"; // Establecer el texto del título como "Ofertas"
+    tituloDiv.appendChild(tituloH2);
+
+    // Crear la línea divisoria (hr)
+    const hrElement = document.createElement("hr");
+
+    // Agregar el título y la línea divisoria al contenedor de productos
+    contenedorProductos.appendChild(tituloDiv);
+    contenedorProductos.appendChild(hrElement);
+  }
+
   productos.forEach((producto) => {
+
     const articulo = document.createElement("article");
     articulo.classList.add("ofertas__articulo");
     articulo.dataset.id = producto.id;
@@ -631,10 +686,27 @@ function mostrarProductosPorCategoria(categoria) {
   const contenedorProductos = document.querySelector(".ofertas__contenedor");
   contenedorProductos.innerHTML = ''; // Limpiar contenido anterior
 
-  // Filtrar y mostrar los productos
-  const productosFiltrados = productos.filter(producto => producto.categoria === categoria);
-  mostrarProductosEnHTML(productosFiltrados);
+  // Obtener el título correspondiente a la categoría
+  let titulo = "Ofertas"; // Título predeterminado
+
+  if (categoria === 'Ofertas') {
+    // Mostrar solo productos con descuento en la categoría "Ofertas"
+    const productosOfertas = productos.filter(producto => producto.descuento > 0);
+    mostrarProductosEnHTML(productosOfertas);
+  } else {
+    // Filtrar y mostrar los productos de la categoría seleccionada
+    const productosFiltrados = productos.filter(producto => producto.categoria === categoria);
+    mostrarProductosEnHTML(productosFiltrados);
+
+    // Actualizar el título según la categoría seleccionada
+    titulo = categoria;
+  }
+
+  // Actualizar el título en el HTML
+  const tituloCategoria = document.querySelector(".ofertas__titulo h2");
+  tituloCategoria.textContent = titulo;
 }
+
 
 
 // Asignar event listeners a las etiquetas del menú de filtros por su id
