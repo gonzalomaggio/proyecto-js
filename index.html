@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="sweetalert2.min.css">
   <link rel="stylesheet" href="./css/styles.css" />
   <title>Document</title>
 </head>
@@ -33,7 +34,7 @@
                 Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#"> Ofertas</a>
+              <a class="nav-link active" href="productos.html"> Ofertas</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -41,27 +42,27 @@
                 Productos
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Pañales</a></li>
-                <li><a class="dropdown-item" href="#">Hogar</a></li>
+                <li><a class="dropdown-item" href="productos.html">Pañales</a></li>
+                <li><a class="dropdown-item" href="productos.html">Hogar</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Cuidado maternal</a>
+                  <a class="dropdown-item" href="productos.html">Cuidado maternal</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Hora de comer</a>
+                  <a class="dropdown-item" href="productos.html">Hora de comer</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Accesorios</a>
+                  <a class="dropdown-item" href="productos.html">Accesorios</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Higiene</a>
+                  <a class="dropdown-item" href="productos.html">Higiene</a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#"> Gift Card</a>
+              <a class="nav-link active" href="productos.html"> Gift Card</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#"> Envíos</a>
+              <a class="nav-link active" href="productos.html"> Envíos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active abrir-carro" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
@@ -132,8 +133,8 @@
     <section class="menu">
       <ul class="menu__list">
         <li>
-          <a class="d-flex align-items-center justify-content-center" href="productos.html"><img src="./img/ofertas.png"
-              alt="" /></a>
+          <a class="d-flex align-items-center justify-content-center" href="productos.html?mostrar=ofertas"><img
+              src="./img/ofertas.png" alt="" /></a>
           <p>Ofertas</p>
         </li>
         <li>
@@ -165,6 +166,38 @@
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body"></div>
+            <div id="formulario-compra" style="display: none;">
+              <h3 class="ms-1">Información de Pago</h3>
+              <form id="formulario">
+                <div class="mb-3 ms-1">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <div class="mb-3 ms-1">
+                  <label for="direccion" class="form-label">Dirección</label>
+                  <input type="text" class="form-control" id="direccion" required>
+                </div>
+                <div class="mb-3 ms-1">
+                  <label for="email" class="form-label">Correo Electrónico</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3 ms-1">
+                  <label for="telefono" class="form-label">Teléfono</label>
+                  <input type="tel" class="form-control" id="telefono" required>
+                </div>
+                <div class="mb-3 ms-1">
+                  <label for="opciones-pago" class="form-label">Opciones de Pago</label>
+                  <select class="form-select" id="opciones-pago" required>
+                    <option value="contra-reembolso">Contra Reembolso</option>
+                    <option value="tarjeta-debito">Tarjeta de Débito</option>
+                    <option value="tarjeta-credito">Tarjeta de Crédito</option>
+                  </select>
+                </div>
+                <button type="button" class="btn btn-primary ms-1" onclick="realizarCompra()">Realizar Compra</button>
+              </form>
+            </div>
+
+
           </div>
         </li>
       </ul>
@@ -292,6 +325,7 @@
       </div>
     </ul>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>

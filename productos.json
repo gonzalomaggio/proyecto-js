@@ -41,50 +41,90 @@
   },
   {
     "id": 6,
-    "descripcion": "Pampers Confort Sec Max all night comfort",
-    "imagen": "img/pampers_confort_max.jpg",
-    "precio": 2780,
+    "descripcion": "Pampers Nonisec Sec Max all night comfort",
+    "imagen": "img/nonisec.jpg",
+    "precio": 6523,
     "descuento": 15,
     "categoria": "Pañales"
   },
   {
     "id": 7,
-    "descripcion": "Pampers Confort Sec Max all night comfort",
-    "imagen": "img/pampers_confort_max.jpg",
-    "precio": 2780,
+    "descripcion": "Oleo calcareo sin fragancia x 950ml",
+    "imagen": "img/oleo.jpg",
+    "precio": 3221,
     "descuento": 15,
-    "categoria": "Pañales"
+    "categoria": "Higiene"
   },
   {
     "id": 8,
-    "descripcion": "Pampers Confort Sec Max all night comfort",
-    "imagen": "img/pampers_confort_max.jpg",
-    "precio": 2780,
+    "descripcion": "Nidina formula infantil - Leche en polvo tarro x 800grs",
+    "imagen": "img/nidina.jpg",
+    "precio": 8967,
     "descuento": 19,
-    "categoria": "Pañales"
+    "categoria": "Alimentación"
   },
   {
     "id": 9,
-    "descripcion": "Pampers Confort Sec Max all night comfort",
-    "imagen": "img/pampers_confort_max.jpg",
+    "descripcion": "Nutrilon pro futura 3 leche en polvo - 1 tarro x 800grs",
+    "imagen": "img/nutrilon.webp",
     "precio": 2780,
     "descuento": 15,
-    "categoria": "Pañales"
+    "categoria": "Alimentación"
   },
   {
     "id": 10,
-    "descripcion": "Pampers Confort Sec Max all night comfort",
-    "imagen": "img/pampers_confort_max.jpg",
-    "precio": 2780,
+    "descripcion": "Reductor de inodoro acolchado Love",
+    "imagen": "img/reductor.png",
+    "precio": 6632,
     "descuento": 15,
-    "categoria": "Pañales"
+    "categoria": "Hogar"
   },
   {
     "id": 11,
-    "descripcion": "Pampers Confort Sec Max all night comfort",
-    "imagen": "img/pampers_confort_max.jpg",
-    "precio": 2780,
+    "descripcion": "Traba armarios en forma de C para muebles - baby innovation",
+    "imagen": "img/traba.jpg",
+    "precio": 5426,
     "descuento": 12,
-    "categoria": "Pañales"
+    "categoria": "Hogar"
+  },
+  {
+    "id": 12,
+    "descripcion": "Estrella algodon clasico x 300grs",
+    "imagen": "img/algodon.webp",
+    "precio": 2480,
+    "descuento": 12,
+    "categoria": "Higiene"
+  },
+  {
+    "id": 13,
+    "descripcion": "Baño liquido glicerina x 200 ml johnson baby",
+    "imagen": "img/shampoo.jpg",
+    "precio": 5426,
+    "descuento": 12,
+    "categoria": "Higiene"
+  },
+{
+    "id": 14,
+    "descripcion": "Gift card - credito disponible para regalar",
+    "imagen": "img/giftcard.jpg",
+    "precio": 10000,
+    "descuento": 0,
+    "categoria": "Gift"
+  },
+  {
+    "id": 15,
+    "descripcion": "Bolsa contenedora para leche materna Dispita x 30u",
+    "imagen": "img/bolsacontenedora.webp",
+    "precio": 3360,
+    "descuento": 0,
+    "categoria": "Alimentación"
+  },
+  {
+    "id": 16,
+    "descripcion": "Mosquitero grande Floating 1.4 mts Baby",
+    "imagen": "img/cochecito.webp",
+    "precio": 8890,
+    "descuento": 0,
+    "categoria": "Hogar"
   }
 ]

@@ -195,7 +195,6 @@ main {
   -webkit-box-orient: vertical;
   display: -webkit-box;
   margin: 0;
-  max-height: 2.6em;
   overflow: hidden;
   overflow-wrap: anywhere;
   text-overflow: ellipsis;
@@ -300,6 +299,10 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  /* a,
+  button {
+    border: none;
+    background-color: transparent; */
 }
 .menu__list-productos {
   flex-wrap: wrap;
@@ -337,17 +340,11 @@ main {
     margin-bottom: 0;
   }
 }
-.menu__list a,
-.menu__list button {
-  border: none;
-  background-color: transparent;
-}
-.menu__list a img,
-.menu__list button img {
+.menu__list img {
   width: 90%;
   max-width: 93px;
 }
-.menu__list p {
+.menu p {
   font-size: 0.8rem;
   padding-top: 0.5rem;
   text-align: center;

@@ -99,7 +99,7 @@ main {
       -webkit-box-orient: vertical;
       display: -webkit-box;
       margin: 0;
-      max-height: 2.6em;
+
       overflow: hidden;
       overflow-wrap: anywhere;
       text-overflow: ellipsis;
@@ -254,26 +254,26 @@ main {
       }
     }
 
-    a,
+    /* a,
     button {
       border: none;
-      background-color: transparent;
+      background-color: transparent; */
 
-      img {
-        width: 90%;
-        max-width: 93px;
-      }
-    }
-
-    p {
-      font-size: 0.8rem;
-      padding-top: 0.5rem;
-      text-align: center;
+    img {
+      width: 90%;
+      max-width: 93px;
     }
   }
 
-
+  p {
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+    text-align: center;
+  }
 }
+
+
+
 
 .carrusel {
   margin-top: 1.5rem;
